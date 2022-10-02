@@ -1,8 +1,7 @@
 import copy
 import unittest
-
-
-#error, no me reconoce database
+import sys
+import config
 
 #preguntar que es unittest.TestCase
 class TestDatabase(unittest.TestCase):
@@ -47,8 +46,8 @@ class TestDatabase(unittest.TestCase):
         self.assertFalse(helpers.dni_valido('F35', db.Clientes.lista))
         self.assertFalse(helpers.dni_valido('48H', db.Clientes.lista))
 
-    if __name__ == '__main__':
-        unittest.main()
+if __name__ == '__main__':
+    unittest.main()
 
 
 

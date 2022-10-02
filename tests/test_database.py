@@ -1,7 +1,7 @@
 import copy
 import unittest
-import prueba as db
-import helpers
+
+
 #error, no me reconoce database
 
 #preguntar que es unittest.TestCase

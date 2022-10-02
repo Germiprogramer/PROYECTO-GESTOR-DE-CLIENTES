@@ -1,6 +1,6 @@
 import copy
 import unittest
-import database as db
+import prueba as db
 #error, no me reconoce database
 
 #preguntar que es unittest.TestCase

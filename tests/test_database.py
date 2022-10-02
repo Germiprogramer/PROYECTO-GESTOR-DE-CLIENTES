@@ -1,6 +1,7 @@
 import copy
 import unittest
 import prueba as db
+import helpers
 #error, no me reconoce database
 
 #preguntar que es unittest.TestCase
@@ -39,6 +40,12 @@ class TestDatabase(unittest.TestCase):
         cliente_borrado = db.Clientes.borrar('48H')
         cliente_rebuscado = db.Clientes.buscar('48H')
         self.assertNotEqual(cliente_borrado, cliente_rebuscado)
+
+    def test_dni_valido(self):
+        self.assertTrue(helpers.dni_valido('00A', db.Clientes.lista))
+        self.assertFalse(helpers.dni_valido('23223S', db.Clientes.lista))
+        self.assertFalse(helpers.dni_valido('F35', db.Clientes.lista))
+        self.assertFalse(helpers.dni_valido('48H', db.Clientes.lista))
 
     if __name__ == '__main__':
         unittest.main()

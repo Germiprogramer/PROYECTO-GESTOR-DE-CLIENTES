@@ -19,6 +19,12 @@ class Cliente:
 class Clientes:
 
     lista = []
+    with open("clientes.csv", newline="\n") as fichero:
+        reader = csv.reader(fichero, delimiter=";")
+        for dni, nombre, apellido in reader:
+            cliente = Cliente(dni, nombre, apellido)
+            lista.append(cliente)
+
 
     #te guarda únicamente la última vez que se ejecuta la función, ocupando menos espacio
     @staticmethod
@@ -54,10 +60,13 @@ class Clientes:
 
     @staticmethod
     def guardar():
-        with open(config.DATABASE_PATH, 'w', newline='\n') as fichero:
-            writer = csv.writer(fichero, delimiter=';')
-            for cliente in Clientes.lista:
-                writer.writerow((cliente.dni, cliente.nombre, cliente.apellido))
+        with open("clientes.csv", "w", newline="\n") as fichero:
+            writer = csv.writer(fichero, delimiter=";")
+            for c in Clientes.lista:
+                writer.writerow((c.dni, c.nombre, c.apellido))
+
+        
+
 
 
     

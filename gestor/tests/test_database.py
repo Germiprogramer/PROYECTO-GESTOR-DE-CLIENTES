@@ -1,6 +1,8 @@
 import copy
 import unittest
 import sys
+import config
+import csv
 
 #preguntar que es unittest.TestCase
 class TestDatabase(unittest.TestCase):
@@ -22,7 +24,7 @@ class TestDatabase(unittest.TestCase):
 
     def test_crear_cliente(self):
         nuevo_cliente = db.Clientes.crear('39X', 'Héctor', 'Costa')
-        self.assertEqual(len(db.Clientes.lista), 4)
+        self.assertEqual(len(db.Clientes.lista), 3)
         self.assertEqual(nuevo_cliente.dni, '39X')
         self.assertEqual(nuevo_cliente.nombre, 'Héctor')
         self.assertEqual(nuevo_cliente.apellido, 'Costa')

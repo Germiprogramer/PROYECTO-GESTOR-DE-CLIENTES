@@ -1,7 +1,6 @@
 import copy
 import unittest
 import sys
-import gestor.config as config
 
 #preguntar que es unittest.TestCase
 class TestDatabase(unittest.TestCase):
@@ -48,6 +47,7 @@ class TestDatabase(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
 
 
 

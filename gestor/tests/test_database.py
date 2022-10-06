@@ -1,7 +1,7 @@
 import copy
 import unittest
 import sys
-import config
+import gestor.config as config
 
 #preguntar que es unittest.TestCase
 class TestDatabase(unittest.TestCase):

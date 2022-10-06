@@ -1,8 +1,8 @@
 #muestra un menú
 
 import os
-import helpers
-import database as db
+import gestor.helpers as helpers
+import gestor.database as db
 
 
 def iniciar():

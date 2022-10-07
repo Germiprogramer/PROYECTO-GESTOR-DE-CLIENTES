@@ -1,7 +1,7 @@
 #manejar la gestión de los datos
 
 import csv
-import gestor.config as config
+import config as config
 
 
 class Cliente:
